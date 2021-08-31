@@ -1,8 +1,8 @@
 .wrapper {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
   height: 100vh; 
+  flex-wrap: wrap-reverse;
   /* 높이가 없으면 child의 속성 align-self 가 적용되지 않음*/
 }
 
@@ -11,20 +11,24 @@
   height : 200px;
   background: cornflowerblue;
   color : white;
+  font-size : 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.child:nth-child(2) {
-  align-self: center;
-  order : 1;
-}
+/*
+flex-wrap 속성
+flex-direction : row-reverese
+flex-direction : colum-reverese
+flex-wrap : wrap-reverse // 아래에서 위로 정렬
+flex-wrap : wrap // child의 사이즈 유지
+flex-wrap : nowrap // 기본값, child를 모두 같은 줄에 정렬함 (width가 줄어들 수 있음)
+align-content : space-around
+=> justify-content와 비슷하지만 각 block이 여러 행에 걸쳐서 나올 때, 행간 공백을 얼마나 둘지에 관한것
 
-.child:nth-child(3) {
-  /* align-self: flex-end; */
-  /* order : 2; */
-}
 
-/* 
-자식 요소에만 줄 수 있는 속성
-1. order : html을 변경하기 어려운 경우에 사용하면 편리함, 기본값은 0 
-2. align-self : align-items 와 같이 cross-axis축에 있는 item 위치 이동
+
+
 */
