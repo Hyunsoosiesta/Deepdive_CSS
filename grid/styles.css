@@ -1,17 +1,35 @@
-.father {
+.grid {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 100px 100px;
-  gap : 20px;
+  /* grid-template-columns: 200px 200px 200px 200px; */
+  grid-template-columns: auto 200px;
+  grid-template-rows: 100px repeat(2, 200px) 100px;
+  grid-template-areas: 
+  "header header header header"
+  "content content content nav"
+  "content content content nav"
+  "footer footer footer footer"; 
 }
 
-.child {
-  background: peru;
-  color : white;
-  font-size: 50px;
-  border : 1px solid black;
+.header {
+  background-color: cadetblue;
+  grid-area: header;
 }
 
+.content {
+  background-color: darkgray;
+  grid-area: content;
+
+}
+
+.nav {
+  background-color: rosybrown;
+  grid-area: nav;
+}
+
+.footer {
+  background-color: darkcyan;
+  grid-area: footer;
+}
 /*
 보통 부모요소에 grid 속성을 적용함
 */
