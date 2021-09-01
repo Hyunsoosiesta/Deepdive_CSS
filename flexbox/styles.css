@@ -19,16 +19,20 @@
 }
 
 /*
-flex-wrap 속성
+flex-direction : row (default)
+flex-direction : colunm
 flex-direction : row-reverese
-flex-direction : colum-reverese
+flex-direction : colunm-reverese
 flex-wrap : wrap-reverse // 아래에서 위로 정렬
 flex-wrap : wrap // child의 사이즈 유지
 flex-wrap : nowrap // 기본값, child를 모두 같은 줄에 정렬함 (width가 줄어들 수 있음)
 align-content : space-around
 => justify-content와 비슷하지만 각 block이 여러 행에 걸쳐서 나올 때, 행간 공백을 얼마나 둘지에 관한것
+*/
 
 
-
-
+/*
+children에게 줄 수 있는 속성
+flex-grow
+flex-shrink
 */
