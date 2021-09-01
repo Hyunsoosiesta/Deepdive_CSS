@@ -1,0 +1,80 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  background-color:#F6F6F6;
+  padding:50px 25px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  max-width: 770px;
+  width: 100%;
+  margin:0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid black;
+  margin-bottom : 20px;
+  padding-bottom : 10px;
+}
+
+h1 {
+  font-size : 85px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size : 40px;
+  font-weight: 600;
+}
+
+#info {
+  display: flex;
+  font-size : 10px;
+  font-weight: 600;
+  margin-bottom : 80px;
+  justify-content: space-between;
+}
+
+#info div {
+  display: flex;
+}
+
+#info li {
+  margin-bottom : 3px;
+}
+
+#info ul:first-child {
+  margin-right : 50px;
+}
+
+#circles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#circles div{
+  width : 200px;
+  height: 200px;
+  border-radius : 50%;
+  margin : 5px;
+}
+
+#circles div:nth-child(1),
+#circles div:nth-child(2),
+#circles div:nth-child(3) {
+  background: peru;
+}
+
+#circles div:nth-child(4),
+#circles div:nth-child(5),
+#circles div:nth-child(6) {
+  background: rosybrown;
+}
+
+#circles div:nth-child(7),
+#circles div:nth-child(8),
+#circles div:nth-child(9) {
+  background: silver;
+}
