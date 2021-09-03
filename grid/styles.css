@@ -7,28 +7,29 @@
 
 .header {
   background-color: cadetblue;
-  grid-column-start: 1;
-  grid-column-end : 5;
+  /* grid-column-start: 1;
+  grid-column-end : 5; */
+  /* start와 end 쓸 필요 없이 -1은 끝까지라는 의미 */
+  /* 처음부터 끝까지라면 [span 개수] 이라고 적어도 됨 */
+  grid-column : span 4;
 }
 
 .content {
   background-color: darkgray;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-column: 1 / -2;
+  grid-row: 2 / span 2;
 }
 
 .nav {
   background-color: rosybrown;
-  grid-row-start :2;
-  grid-row-end:4;
+  grid-row : span 2;
+
 }
 
 .footer {
   background-color: darkcyan;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column: span 4;
+
 }
 
 
