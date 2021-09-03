@@ -1,19 +1,17 @@
 .grid {
-  background: #000;
   color : #ffffff;
   display: grid;
   gap : 10px;
   height: 250vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-  /* align-content: center;
-  justify-content: end; */
-  place-content: end center; /* 수직 수평 */
-
 }
 
 .header {
   background-color: cadetblue;
+  /* align-self : end;
+  justify-self: center; */
+  place-self: end center;
 }
 
 .content {
