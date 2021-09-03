@@ -2,11 +2,8 @@
   color : #ffffff;
   display: grid;
   gap : 10px;
-  height: 50vh;
-  grid-template-columns: repeat(10, minmax(100px, 1fr));
-  grid-template-rows: repeat(4, 100px);
-  grid-auto-columns: 100px;
-
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
 }
 
 .item:nth-child(odd) {
@@ -17,3 +14,12 @@
   background-color: goldenrod;
 }
 
+.grid:first-child {
+  /* 주어진 사이즈에서 최대한 많이 생성*/
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid:last-child {
+  /* 주어진 사이즈에 맞춰 생성*/
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
