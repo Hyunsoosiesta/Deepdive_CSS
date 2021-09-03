@@ -1,35 +1,35 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(4, 100px);
-  gap : 10px;
+  gap : 5px;
+  height: 50vh;
+  /* fr로 지정하면 동일한 4개의 박스가 생김
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr); */
+  grid-template: 
+  "header header header header" 1fr /* how tall is the row */
+  "content content content nav" 2fr 
+  "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr /* column height*/
+  ;
 }
 
 .header {
   background-color: cadetblue;
-  /* grid-column-start: 1;
-  grid-column-end : 5; */
-  /* start와 end 쓸 필요 없이 -1은 끝까지라는 의미 */
-  /* 처음부터 끝까지라면 [span 개수] 이라고 적어도 됨 */
-  grid-column : span 4;
+  grid-area: header;
 }
 
 .content {
   background-color: darkgray;
-  grid-column: 1 / -2;
-  grid-row: 2 / span 2;
+  grid-area: content;
 }
 
 .nav {
   background-color: rosybrown;
-  grid-row : span 2;
-
+  grid-area: nav;
 }
 
 .footer {
   background-color: darkcyan;
-  grid-column: span 4;
-
+  grid-area: footer;
 }
 
 
